@@ -20,4 +20,3 @@ def cargando():
     for i in range(0, 32):
         print'*',
         time.sleep(.025)
-

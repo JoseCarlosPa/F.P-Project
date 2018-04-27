@@ -44,12 +44,14 @@ def main():
             # Programa numero uno
             os.system("cls")
             print("Usted entro a programa en Python: ")
-            #LLamaos la funcion/procedimiento de cargado que mostrara una animacion con asteriscos
+            # LLamaos la funcion procedimiento de cargado que mostrara una animacion con asteriscos
             Libreria.cargando()
         elif opcion == 2:
             # Programa numero dos
             os.system("cls")
             print("Usted entro a Archivo en c")
+        elif opcion == 3:
+            exit(1)
 
 
 print("Bienvenido al maravilloso mundo de python\n\n")

@@ -44,6 +44,7 @@ def main():
             # Programa numero uno
             os.system("cls")
             print("Usted entro a programa en Python: ")
+            #LLamaos la funcion/procedimiento de cargado que mostrara una animacion con asteriscos
             Libreria.cargando()
         elif opcion == 2:
             # Programa numero dos

@@ -39,11 +39,11 @@ def bienvenido():
 
 
 def resultado():
-    print("|------------------------------|")
+
     print(" __                             ")
     print("|__)  _  _     | |_  _   _|  _  ")
     print("| \  (- _) |_| | |_ (_| (_| (_) ")
-    print("|------------------------------|")
+
 
 # Fin de la seccion  de Menus y partes Graficas de bajo nivel, inicio de funciones y procedimientos
 

@@ -51,17 +51,18 @@ def main():
             os.system("PAUSE")
             os.system("cls")
             # Inicia programa numero uno
-            print "\n Un caracol decidió subir a un árbol de 15 m de altura. "
-            print"Durante cada día tenía tiempo de subir 5 m; "
+            print "\n Un caracol decidió subir a un arbol de 15 m de altura. "
+            print"Durante cada dia tenía tiempo de subir 5 m; "
             print" pero mientras dormía por la noche, bajaba 4 m. "
-            print"¿Al cabo de cuántos días llegará a la cima del árbol?\n "
+            print" Al cabo de cuántos dias llegará a la cima del arbol?\n "
             print("En base estos datos genera un programa que calcule los dias dependiendo de los datos")
             print "Ingresa los datos para calcular el tiempo estimdao:"
 
-            altura_arbol = input("Dame la altura del arbol")
-            metros_subidos = input("Dame los metros que sube por dia")
-            metros_baja = input("Dame los metros que baja por noche")
-            print ("Tarda " + Libreria.calcular_dias_que_tarda(altura_arbol, metros_subidos, metros_baja) + "Dias en subir el arbol")
+            altura_arbol = input("Dame la altura del arbol: ")
+            metros_subidos = input("Dame los metros que sube por dia: ")
+            metros_baja = input("Dame los metros que baja por noche: ")
+
+            print "Tarda ", Libreria.calcular_dias_que_tarda(altura_arbol, metros_subidos, metros_baja), "Dias en subir el arbol"
 
             os.system("PAUSE")
         elif opcion == 2:

@@ -11,7 +11,7 @@ def menu_principal():
     print ("|----------------------------|")
 
 
-def cargando():
+def pantalla_carga():
     print ("|-------------------------------------------------------------|")
     print ("|                                                             |")
     print ("|                          CARGANDO..                         |")

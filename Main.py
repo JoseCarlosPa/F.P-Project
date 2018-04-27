@@ -43,9 +43,9 @@ def main():
         if opcion == 1:
             # Programa numero uno
             os.system("cls")
-            print("Usted entro a programa en Python: ")
-            # LLamaos la funcion procedimiento de cargado que mostrara una animacion con asteriscos
-            Libreria.cargando()
+            print('Usted entro a programa en Python: ')
+            # LLamamos la funcion procedimiento de cargado que mostrara una animacion con asteriscos
+            Libreria.pantalla_carga()
         elif opcion == 2:
             # Programa numero dos
             os.system("cls")

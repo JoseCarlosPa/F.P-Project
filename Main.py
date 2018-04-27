@@ -61,9 +61,10 @@ def main():
             altura_arbol = input("Dame la altura en metros del arbol: ")
             metros_subidos = input("Dame los metros que sube por dia: ")
             metros_baja = input("Dame los metros que baja por noche: ")
+            dias = Libreria.calcular_dias_que_tarda(altura_arbol, metros_subidos, metros_baja)
             print("\n\n\n")
             Libreria.resultado()
-            print "\n\nTarda ", Libreria.calcular_dias_que_tarda(altura_arbol, metros_subidos, metros_baja), "dias en subir el arbol"
+            print "\n\nTarda ", dias, "dias en subir el arbol"
 
             os.system("PAUSE")
         elif opcion == 2:

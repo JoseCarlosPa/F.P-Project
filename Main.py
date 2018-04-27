@@ -48,21 +48,22 @@ def main():
             print('Usted entro a programa en Python: ')
             # LLamamos la funcion procedimiento de cargado que mostrara una animacion con asteriscos
             Libreria.pantalla_carga()
+            print("\n")
             os.system("PAUSE")
             os.system("cls")
             # Inicia programa numero uno
-            print "\n Un caracol decidió subir a un arbol de 15 m de altura. "
-            print"Durante cada dia tenía tiempo de subir 5 m; "
-            print" pero mientras dormía por la noche, bajaba 4 m. "
-            print" Al cabo de cuántos dias llegará a la cima del arbol?\n "
+            print "\n Un caracol decidio subir a un arbol de 15 m de altura. "\
+                "Durante cada dia tenia tiempo de subir 5 m pero mientras dormia por la noche, bajaba 4 m. "
+            print" Al cabo de cuantos dias llegara a la cima del arbol?\n\n "
             print("En base estos datos genera un programa que calcule los dias dependiendo de los datos")
-            print "Ingresa los datos para calcular el tiempo estimdao:"
+            print "Ingresa los datos para calcular el tiempo estimdao:\n\n"
 
-            altura_arbol = input("Dame la altura del arbol: ")
+            altura_arbol = input("Dame la altura en metros del arbol: ")
             metros_subidos = input("Dame los metros que sube por dia: ")
             metros_baja = input("Dame los metros que baja por noche: ")
-
-            print "Tarda ", Libreria.calcular_dias_que_tarda(altura_arbol, metros_subidos, metros_baja), "Dias en subir el arbol"
+            print("\n\n\n")
+            Libreria.resultado()
+            print "\n\nTarda ", Libreria.calcular_dias_que_tarda(altura_arbol, metros_subidos, metros_baja), "dias en subir el arbol"
 
             os.system("PAUSE")
         elif opcion == 2:

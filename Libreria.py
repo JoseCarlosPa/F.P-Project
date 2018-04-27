@@ -38,9 +38,26 @@ def bienvenido():
     print("------------------------------------------------------------------------------")
 
 
+def resultado():
+    print("|------------------------------|")
+    print(" __                             ")
+    print("|__)  _  _     | |_  _   _|  _  ")
+    print("| \  (- _) |_| | |_ (_| (_| (_) ")
+    print("|------------------------------|")
+
 # Fin de la seccion  de Menus y partes Graficas de bajo nivel, inicio de funciones y procedimientos
 
 def calcular_dias_que_tarda(altura,subida,bajada):
-    dias_que_tarda=0
+    while (altura < 0 or subida < 0 or bajada < 0):
+        print("Tu datos no fueron logicos la altura no puede ser mas alta que lo que sube y lo que sube no puede ser mas de lo que baja")
+        altura = input("Dame la altura en metros del arbol: ")
+        subida = input("Dame los metros que sube por dia: ")
+        bajada = input("Dame los metros que baja por noche: ")
+    dias_que_tarda = 0
+    aux = altura - subida
+    while aux > 0:
+        altura = (altura - subida) + bajada
+        dias_que_tarda = dias_que_tarda + 1
+        aux = altura - subida
 
-    return dias_que_tarda
+    return dias_que_tarda +1

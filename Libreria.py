@@ -57,6 +57,19 @@ def error():
 
 # ---------Fin de la seccion  de Menus y partes Graficas de bajo nivel, inicio de funciones y procedimientos-----------
 
+def lee_si_es_nuemero():
+    # Se repetira hasta llegar al return
+    while True:
+        opcion = raw_input("Ingrese la Opcion deseada: ")
+        try:
+            # Al poner el int aseguramos que sea entero si no lo es, entra al caso esepcion y repite el ciclo
+            opcion = int(opcion)
+            return opcion
+        except ValueError:
+            print "Has ingresado una opcion no valida, intentalo otra vez por favor"\
+            "las opciones validas son numeros del 1 al 7, no se pueden negativos , decimal o letras"
+
+
 
 # Esta funcion se encarga calcular los dias nesesarios para que un caracol subaun arbol
 # Param@ alutra, subida,bajada

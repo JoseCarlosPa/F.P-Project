@@ -17,6 +17,7 @@ import os  # Libreria para usar funciones de windows, se cambia si fueran MAC
 import Libreria
 
 
+
 # Fin de las librerias
 
 
@@ -26,52 +27,61 @@ def main():
     while opcion != 7:
         os.system("cls")
         Libreria.menu_principal()  # Mostrar menu
-
-        opcion = input("Ingresa La opcion que deseas: ")
-        contador = 0  # Contador que nos sirve para lanzar un mensaje de ayuda a los 4 intentos de fallo
-
-        while opcion >= 4 or opcion <= 0 or opcion % 1 != 0:
-            # Validacion de la respuesta ingresada si no se cumple entrara hasta que sea valido
-            opcion = input("Porfavor ingresa un numero valido: ")
-            contador = contador + 1  # por cada ciclo el contador aumentara en 1
-
-            if contador >= 3:
-                # Despliegue de un mensaje cuando contador es mayor o igual a tres
-                print "\n\nLos rangos para poder ingresar a una opcion son de 1 al 4,"
-                print "no pueden ser caracteres, numeros negativos, "
-                print "tener punto decimal o ser algun tipo de simbolo "
-                print "debera ser  1,2,3 o 4\n\n"
-                contador = 0
+        opcion = Libreria.lee_si_es_nuemero()
+        print opcion
         # Programa numero uno
         if opcion == 1:
             os.system("cls")
             print('Usted entro a programa en Python: ')
             # LLamamos la funcion procedimiento de cargado que mostrara una animacion con asteriscos
+
             Libreria.pantalla_carga()
             print("\n")
             os.system("PAUSE")
             os.system("cls")
-            # Inicia programa numero uno
+
+            # Inicia programa numero uno, descripcion del problema
+
             print "\n Un caracol decidio subir a un arbol de 15 m de altura. "\
                 "Durante cada dia tenia tiempo de subir 5 m pero mientras dormia por la noche, bajaba 4 m. "
             print" Al cabo de cuantos dias llegara a la cima del arbol?\n\n "
             print("En base estos datos genera un programa que calcule los dias dependiendo de los datos")
             print "Ingresa los datos para calcular el tiempo estimdao:\n\n"
 
+            # Pedir los valores
+
             altura_arbol = input("Dame la altura en metros del arbol: ")
             metros_subidos = input("Dame los metros que sube por dia: ")
             metros_baja = input("Dame los metros que baja por noche: ")
+
+            # llamar funcion y almacenar en dias
+
             dias = Libreria.calcular_dias_que_tarda(altura_arbol, metros_subidos, metros_baja)
             print("\n\n\n")
             Libreria.resultado()
+
+            # Imprimir resltados
             print "\n\nTarda ", dias, "dias en subir el arbol"
 
             os.system("PAUSE")
         elif opcion == 2:
-            # Programa numero dos
+            # Programa numero dos leer en la terminal el codigo del programa hecho en c
+            Libreria.pantalla_carga()
+            print("\n")
+            os.system("PAUSE")
             os.system("cls")
+            # llamar al archivo
             print("Usted entro a Archivo en c")
+            archivo = open("A01702828.c", "r")
+            for linea in archivo.readlines():
+                print linea
+            # Cerrar archivo
+            archivo.close()
+            os.system("PAUSE")
         # Opcion para salir o terminar el programa
+        elif opcion==3:
+            # Por medio de comando y libreria os, llamar y ejecutar el archivo correspondiente
+            os.system("start Archivos/A01702828.exe -p1 datos")
         elif opcion == 7:
             exit(1)
 

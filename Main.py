@@ -15,7 +15,8 @@
 
 import os  # Libreria para usar funciones de windows, se cambia si fueran MAC
 import Libreria
-
+import time
+from msvcrt import getch
 # Fin de las librerias
 
 
@@ -83,15 +84,44 @@ def main():
         elif opcion == 4:
 
             # Visualizar el laboratorio No.12 hecho en c
-
-            Libreria.pantalla_carga()
             print("\n")
             os.system("PAUSE")
             os.system("cls")
             opcion_lab = 0
             while opcion_lab != 6:
+                os.system("cls")
                 Libreria.menu_laboratorio()
                 opcion_lab = Libreria.lee_si_es_nuemero()
+                os.system("cls")
+                if opcion_lab == 1:
+                    print "Opcion 1"
+                    for i in range(0, 5):
+                        oracion = raw_input("Dame una oracion")
+                        Libreria.escribir_en_archivo(oracion)
+                    os.system("Pause")
+                elif opcion_lab == 2:
+                    numero = input("Cuantos alumnos desea almacenar?")
+                    for i in range(0, numero):
+                        Libreria.escribir_con_formato()
+                    os.system("Pause")
+                elif opcion_lab == 3:
+                    c = getch()
+                    while c != '\x1b':
+                        oracion = raw_input("Dame algo que quieras escribir: ")
+                        oracion = (time.strftime("%d/%m/%y") + ": " + oracion)
+                        c = getch()
+                        Libreria.escribir_en_bitacora(oracion)
+                    os.system("Pause")
+
+                elif opcion_lab == 4:
+                    print "Opcion 4"
+                    os.system("Pause")
+                elif opcion_lab == 5:
+                    print "Opcion 5"
+                    os.system("Pause")
+                elif opcion_lab == 6:
+                    # No hace nada
+                    print "Adios"
 
         elif opcion == 5:
             # Programa numero dos leer en la terminal el codigo del programa hecho en c

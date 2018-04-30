@@ -84,7 +84,7 @@ def lee_si_es_nuemero():
             return opcion
         except ValueError:
             print "Has ingresado una opcion no valida, intentalo otra vez por favor"\
-                "las opciones validas son numeros del 1 al 7, no se pueden negativos , decimal o letras"
+                "las opciones validas son numeros como 1,2,3...10, no se pueden negativos , decimal o letras"
 
 # Esta funcion se encarga calcular los dias nesesarios para que un caracol subaun arbol
 # Param@ alutra, subida,bajada
@@ -113,3 +113,25 @@ def calcular_dias_que_tarda(altura, subida, bajada):
         aux = altura - subida
 
     return dias_que_tarda
+
+# Inicio funciones y procedimientos de Laboratorio 12 c a python
+
+def escribir_en_archivo(oracion):
+    archivo = open("Ejercicio1.txt","a")
+    archivo.write("\n" + oracion)
+    archivo.close()
+
+def escribir_en_bitacora(oracion):
+    archivo = open("Bitacora.txt","a")
+    archivo.write("\n" + oracion)
+    archivo.close()
+
+def escribir_con_formato():
+    archivo = open("califica.txt", "a")
+    nombre = raw_input("Dame el nombre del alumno: ")
+    archivo.write(nombre)
+    carrera = raw_input("Dame la carrera del alumno: ")
+    archivo.write(", " + carrera)
+    calificaicon = raw_input("Dame la calificacion del alumno: ")
+    archivo.write(", " + calificaicon + "\n")
+    archivo.close()

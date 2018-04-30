@@ -14,8 +14,25 @@ def menu_principal():
     print ("|4. Programa en python Laboratorio  |")
     print ("|5. Codigo en c                     |")
     print ("|6. Ejecutar programa c             |")
-    print ("|7. Salir                           |")
+    print ("|7. Programa en python 2            |")
+    print ("|8. programa en c                   |")
+    print ("|9. Ejecutar e c                    |")
+    print ("|10. Salir                           |")
     print ("|-----------------------------------|")
+
+
+def menu_laboratorio():
+
+    print("-----------------------------------\n")
+    print("               MENU\n")
+    print("-----------------------------------\n")
+    print("1. Escribe en Archivo: \n")
+    print("2. Guardar datos de alumnos: \n")
+    print("3. Escribir en bitacora:\n")
+    print("4. Esconde en archivo:\n")
+    print("5. Programa abierto:\n")
+    print("6. Salir:\n")
+    print("-----------------------------------\n")
 
 
 def pantalla_carga():
@@ -67,13 +84,13 @@ def lee_si_es_nuemero():
             return opcion
         except ValueError:
             print "Has ingresado una opcion no valida, intentalo otra vez por favor"\
-            "las opciones validas son numeros del 1 al 7, no se pueden negativos , decimal o letras"
-
-
+                "las opciones validas son numeros del 1 al 7, no se pueden negativos , decimal o letras"
 
 # Esta funcion se encarga calcular los dias nesesarios para que un caracol subaun arbol
 # Param@ alutra, subida,bajada
 # return@ dias que tarda
+
+
 def calcular_dias_que_tarda(altura, subida, bajada):
     # Evaluar primero si las condiciones nesesarias para que no se cicle se cumplan
     while altura < 0 or subida < 0 or bajada < 0 or subida <= bajada:

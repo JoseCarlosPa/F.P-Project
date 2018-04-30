@@ -16,8 +16,6 @@
 import os  # Libreria para usar funciones de windows, se cambia si fueran MAC
 import Libreria
 
-
-
 # Fin de las librerias
 
 
@@ -72,17 +70,54 @@ def main():
             os.system("cls")
             # llamar al archivo
             print("Usted entro a Archivo en c")
-            archivo = open("A01702828.c", "r")
+            archivo = open("Archivos/Programa_c.c", "r")
             for linea in archivo.readlines():
                 print linea
             # Cerrar archivo
             archivo.close()
             os.system("PAUSE")
         # Opcion para salir o terminar el programa
-        elif opcion==3:
+        elif opcion == 3:
+            # Por medio de comando y libreria os, llamar y ejecutar el archivo correspondiente
+            os.system("start Archivos/Programa_c.exe -p1 datos")
+        elif opcion == 4:
+
+            # Visualizar el laboratorio No.12 hecho en c
+
+            Libreria.pantalla_carga()
+            print("\n")
+            os.system("PAUSE")
+            os.system("cls")
+            opcion_lab = 0
+            while opcion_lab != 6:
+                Libreria.menu_laboratorio()
+                opcion_lab = Libreria.lee_si_es_nuemero()
+
+        elif opcion == 5:
+            # Programa numero dos leer en la terminal el codigo del programa hecho en c
+            Libreria.pantalla_carga()
+            print("\n")
+            os.system("PAUSE")
+            os.system("cls")
+            # llamar al archivo
+            print("Usted entro a Archivo en c")
+            archivo = open("Archivos/A01702828.c", "r")
+            for linea in archivo.readlines():
+                print linea
+            # Cerrar archivo
+            archivo.close()
+            os.system("PAUSE")
+        elif opcion == 6:
             # Por medio de comando y libreria os, llamar y ejecutar el archivo correspondiente
             os.system("start Archivos/A01702828.exe -p1 datos")
         elif opcion == 7:
+            exit(1)
+        elif opcion == 8:
+            exit(1)
+        elif opcion == 9:
+            exit(1)
+        elif opcion == 10:
+
             exit(1)
 
 

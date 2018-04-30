@@ -27,7 +27,6 @@ def main():
         os.system("cls")
         Libreria.menu_principal()  # Mostrar menu
         opcion = Libreria.lee_si_es_nuemero()
-        print opcion
         # Programa numero uno
         if opcion == 1:
             os.system("cls")
@@ -82,45 +81,53 @@ def main():
             # Por medio de comando y libreria os, llamar y ejecutar el archivo correspondiente
             os.system("start Archivos/Programa_c.exe -p1 datos")
         elif opcion == 4:
-
             # Visualizar el laboratorio No.12 hecho en c
             print("\n")
             os.system("PAUSE")
             os.system("cls")
             opcion_lab = 0
-            while opcion_lab != 6:
+            # Repetiremos hasta que lab sea igual a 5
+            while opcion_lab != 5:
                 os.system("cls")
+                # Llamanod librerias
                 Libreria.menu_laboratorio()
                 opcion_lab = Libreria.lee_si_es_nuemero()
                 os.system("cls")
                 if opcion_lab == 1:
-                    print "Opcion 1"
+                    # Repetir 5 veces dando una oracion y llamando el procedimeinto para guardar en archivo
                     for i in range(0, 5):
                         oracion = raw_input("Dame una oracion")
                         Libreria.escribir_en_archivo(oracion)
                     os.system("Pause")
                 elif opcion_lab == 2:
+                    # Pedir numero de veces que se repetira
                     numero = input("Cuantos alumnos desea almacenar?")
                     for i in range(0, numero):
                         Libreria.escribir_con_formato()
                     os.system("Pause")
                 elif opcion_lab == 3:
+                    # Hasta que el valor sea esc se repetria y agregara la fecha
                     c = getch()
                     while c != '\x1b':
                         oracion = raw_input("Dame algo que quieras escribir: ")
+                        # Con la libreria time agregar dia mes y año
                         oracion = (time.strftime("%d/%m/%y") + ": " + oracion)
                         c = getch()
                         Libreria.escribir_en_bitacora(oracion)
                     os.system("Pause")
 
                 elif opcion_lab == 4:
-                    print "Opcion 4"
+                    # Pedir un mensaje a ecnripatr y guardar en un archivo
+                    oracion = raw_input("Dame una Mensaje que queiras esncriptar: ")
+                    print "Texto Cifrado: " + Libreria.encriptar_mensaje(oracion)
+                    mensaje = Libreria.encriptar_mensaje(oracion)
+                    archivo = open("Mensaje_secreto.txt", "a")
+                    archivo.write("\n" + mensaje)
+                    archivo.close()
                     os.system("Pause")
+
                 elif opcion_lab == 5:
-                    print "Opcion 5"
-                    os.system("Pause")
-                elif opcion_lab == 6:
-                    # No hace nada
+                    # No hace nada, sale del menu laoratorio
                     print "Adios"
 
         elif opcion == 5:

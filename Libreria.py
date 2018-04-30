@@ -30,8 +30,7 @@ def menu_laboratorio():
     print("2. Guardar datos de alumnos: \n")
     print("3. Escribir en bitacora:\n")
     print("4. Esconde en archivo:\n")
-    print("5. Programa abierto:\n")
-    print("6. Salir:\n")
+    print("5. Salir:\n")
     print("-----------------------------------\n")
 
 
@@ -114,19 +113,27 @@ def calcular_dias_que_tarda(altura, subida, bajada):
 
     return dias_que_tarda
 
-# Inicio funciones y procedimientos de Laboratorio 12 c a python
+# ----------------------------------------- Fin seccion funciones logicas--------------------------------------
+# -----------------Inicio funciones y procedimientos de Laboratorio 11 c a python-----------------------------
+
 
 def escribir_en_archivo(oracion):
-    archivo = open("Ejercicio1.txt","a")
+    # Inciarlizar y abir archivo
+    archivo = open("Ejercicio1.txt", "a")
+    # Escribir en archivo y cerrarlo
     archivo.write("\n" + oracion)
     archivo.close()
+
 
 def escribir_en_bitacora(oracion):
-    archivo = open("Bitacora.txt","a")
+    # Abrir , escribir y cerrar archivo
+    archivo = open("Bitacora.txt", "a")
     archivo.write("\n" + oracion)
     archivo.close()
 
+
 def escribir_con_formato():
+    # Abrir , pedir daots, escribirlos y cerrar archivo
     archivo = open("califica.txt", "a")
     nombre = raw_input("Dame el nombre del alumno: ")
     archivo.write(nombre)
@@ -135,3 +142,16 @@ def escribir_con_formato():
     calificaicon = raw_input("Dame la calificacion del alumno: ")
     archivo.write(", " + calificaicon + "\n")
     archivo.close()
+
+
+def encriptar_mensaje(oracion):
+    # Variable inciado en ""  indicando es de caracteres
+    mensaje_encriptado = ""
+    # Repetir hastalongitud de carateres
+    for caracter in oracion:
+        # Agregar valor a cada letra
+        mensaje_encriptado = mensaje_encriptado + chr(ord(caracter) + 1)
+        # Devolver mensaje
+    return mensaje_encriptado
+
+# -------------------------- Fin Funcioens y procedimientos de Lab 11 c a python-----------------------------------

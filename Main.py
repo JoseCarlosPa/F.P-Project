@@ -148,13 +148,22 @@ def main():
             # Por medio de comando y libreria os, llamar y ejecutar el archivo correspondiente
             os.system("start Archivos/A01702828.exe -p1 datos")
         elif opcion == 7:
-            exit(1)
+            Libreria.rombo()
+            os.system("PAUSE")
+            main()
         elif opcion == 8:
-            exit(1)
+            # Leery linea por linea e imprimir en terinar el programa c 2
+            print("Usted entro a Archivo en c")
+            archivo = open("Archivos/Programa_en_c_2.c", "r")
+            for linea in archivo.readlines():
+                print linea
+            # Cerrar archivo
+            archivo.close()
+            os.system("PAUSE")
         elif opcion == 9:
-            exit(1)
+            # Por medio de comando y libreria os, llamar y ejecutar el archivo correspondiente
+            os.system("start Archivos/Programa_en_c_2.exe -p1 datos")
         elif opcion == 10:
-
             exit(1)
 
 

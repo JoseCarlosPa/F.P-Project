@@ -112,6 +112,37 @@ def calcular_dias_que_tarda(altura, subida, bajada):
         aux = altura - subida
 
     return dias_que_tarda
+def rombo():
+    nombre = raw_input("Escribe tu nombre: ")
+    n = len(nombre)
+
+    def espacio(esp):  # espacios
+        for i in range(0, esp):
+            print " ",
+
+    def sup_izq(x):
+        for i in range(0, n):  # filas eje x
+            for x in range(0, n - i - 1):
+                print " ",
+            for j in range(0, i + 1):  # columnas eje x
+                print nombre[j],
+            for z in range(0, i + 1):
+                print nombre[z],
+            print " "
+        return ""
+
+    def inf_izq(y):
+        for i in range(0, n):  # filas eje y
+            espacio(i + 1)
+            for j in range(0, n - i - 1):  # columnas eje y
+                print nombre[j],
+            for z in range(0, n - i - 1):
+                print nombre[z],
+            print ""
+        return ""
+
+    print sup_izq(n) + inf_izq(n),
+
 
 # ----------------------------------------- Fin seccion funciones logicas--------------------------------------
 # -----------------Inicio funciones y procedimientos de Laboratorio 11 c a python-----------------------------
@@ -155,3 +186,5 @@ def encriptar_mensaje(oracion):
     return mensaje_encriptado
 
 # -------------------------- Fin Funcioens y procedimientos de Lab 11 c a python-----------------------------------
+
+
